@@ -21,16 +21,36 @@ class Apples:
         self.color = random.choice(colors) 
 
     """ Creates dynamic apples that fall under gravity"""
-    def create_apples(self):
+    def create_apple(self):
+        body = pymunk.Body(5, 100, body_type=pymunk.Body.DYNAMIC)
+        body.position = (self.x, self.y)
+        shape = pymunk.Circle(body, 0)
+        shape.elasticity = 0.6 
+        space.add(body, shape)
+        shape.color = self.color 
+        return shape    
 
+class Box: 
+    def __init__(self, space, x, y, width, height): 
+        self.space = space 
+        self.x = x 
+        self.y = y 
+        self.width = width 
+        self.height = height 
+        self.color = random.choice(colors)
 
-
-
-def create
-
-
-
-
+    """Create static boxes that function as obstacles"""
+    def create_box(self):  
+        body = pymunk.Body(body_type=pymunk.Body.STATIC)
+        body.position = (self.x, self.y)
+        shape = pymunk.Poly.create_box(body, (self.width, self.height))
+        shape.elasticity = 0.8 
+        space.add(body, shape)
+        shape.color = self.color 
+        return shape 
+    
+    def draw(): 
+        return None 
 
 
 
