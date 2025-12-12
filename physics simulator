@@ -28,7 +28,8 @@ class Apples:
         shape.elasticity = 0.6 
         space.add(body, shape)
         shape.color = self.color 
-        return shape    
+        return shape 
+    
 
 class Box: 
     def __init__(self, space, x, y, width, height): 
@@ -51,7 +52,6 @@ class Box:
     
     def draw(): 
         return None 
-
 
 
 
