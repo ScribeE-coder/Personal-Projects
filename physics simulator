@@ -11,9 +11,11 @@ clock = pygame.time.Clock()
 space = pymunk.Space()
 space.gravity = (0, 900)
 
-colors = [(239, 71, 111), (255, 209, 102), (6, 214, 160), (17, 138, 178), (7, 59, 76)]
+colors = [(0, 0, 0), (100, 100, 100), (100, 50, 20), (200, 200, 200), (200, 150, 200), (100, 200, 100), (100, 50, 100), (50, 50, 50), (160, 0, 0)]
+# List that holds all apple and box objects 
+shapes = [] 
 
-class Apples: 
+class Apple: 
     def __init__(self, space, x, y):
         self.space = space 
         self.x = x 
@@ -24,12 +26,11 @@ class Apples:
     def create_apple(self):
         body = pymunk.Body(5, 100, body_type=pymunk.Body.DYNAMIC)
         body.position = (self.x, self.y)
-        shape = pymunk.Circle(body, 0)
-        shape.elasticity = 0.6 
+        shape = pymunk.Circle(body, 30)
+        shape.elasticity = 1
         space.add(body, shape)
         shape.color = self.color 
-        return shape 
-    
+        return shape
 
 class Box: 
     def __init__(self, space, x, y, width, height): 
@@ -45,21 +46,52 @@ class Box:
         body = pymunk.Body(body_type=pymunk.Body.STATIC)
         body.position = (self.x, self.y)
         shape = pymunk.Poly.create_box(body, (self.width, self.height))
-        shape.elasticity = 0.8 
+        shape.elasticity = 0.01
         space.add(body, shape)
         shape.color = self.color 
+        shape.width = self.width 
+        shape.height = self.height 
+        shape.x = self.x 
+        shape.y = self.y 
         return shape 
-    
-    def draw(): 
-        return None 
 
+def shape_draw(shapes): 
+    for shape in shapes: 
+        pos_x = int(shape.body.position.x)
+        pos_y = int(shape.body.position.y)
+        
+        if isinstance(shape, pymunk.Circle):
+            radius = int(shape.radius)
+            pygame.draw.circle(screen, shape.color, (pos_x, pos_y), radius) 
 
+        elif isinstance(shape, pymunk.Poly):
+            offset_x = None 
+            offset_y = None  
+            rect = pygame.Rect(pos_x - 100, pos_y - 100, shape.width, shape.height) # offset (pos_x - [], pos_y - []) is half the width/height of the box
+            pygame.draw.rect(screen, shape.color, rect) 
+            
+
+apple1 = Apple(space, 300, 50) 
+apple2 = Apple(space, 300, 50) 
+apple3 = Apple(space, 300, 10)
+box1 = Box(space, 300, 300, 100, 200)
+
+# shapes contains all shapes associated with apple and box objects 
+shapes.append(apple1.create_apple())
+shapes.append(apple2.create_apple())
+shapes.append(apple3.create_apple())
+shapes.append(box1.create_box())
 
 running = True 
 while running: 
     for event in pygame.event.get(): 
         if event.type == pygame.QUIT: 
             running = False
+            pygame.quit()
+            sys.exit()
     
-    screen.fill((217, 217, 217)) 
+    screen.fill((217, 217, 217))
+    space.step(1/60) 
+    shape_draw(shapes)
     pygame.display.update()
+    clock.tick(60)
