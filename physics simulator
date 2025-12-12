@@ -1,4 +1,4 @@
-import pygame, pymunk 
+import pygame, pymunk, sys, random
 
 pygame.init()
 
@@ -6,6 +6,24 @@ SCREEN_WIDTH = 600
 SCREEN_HEIGHT = 600 
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+clock = pygame.time.Clock()
+
+space = pymunk.Space()
+space.gravity = (0, 900)
+
+colors = [(239, 71, 111), (255, 209, 102), (6, 214, 160), (17, 138, 178), (7, 59, 76)]
+
+class Apples: 
+    def __init__(self, space, x, y):
+        self.space = space 
+        self.x = x 
+        self.y = y
+        self.color = random.choice(colors) 
+
+    """ Creates dynamic apples that fall under gravity"""
+    def create_apples(self):
+
+
 
 
 def create
