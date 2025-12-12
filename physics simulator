@@ -48,11 +48,13 @@ class Box:
         shape = pymunk.Poly.create_box(body, (self.width, self.height))
         shape.elasticity = 0.01
         space.add(body, shape)
+        
         shape.color = self.color 
         shape.width = self.width 
         shape.height = self.height 
         shape.x = self.x 
         shape.y = self.y 
+        
         return shape 
 
 def shape_draw(shapes): 
