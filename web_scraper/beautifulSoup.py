@@ -4,26 +4,26 @@ from bs4 import BeautifulSoup
 with open("dummy_html.html", "r") as file: 
     doc = BeautifulSoup(file, "html.parser")
 
-
 def find_title(document): 
     title = doc.title
     return title 
 
 title = find_title(doc)
 
+# turns doc title into a list 
 def title_listy(title): 
-    words = []
-    for word in title: 
-        words.append(word)
-    return words
+   listy = [] 
+   for word in title: 
+       listy.append(word)
+   return listy 
 
-def title_to_str(words): 
+# turns doc title into a string
+def title_to_str(title): 
     stringy = "" 
-    for word in words: 
+    for word in title: 
         stringy += word 
     return stringy 
 
-word_listy = title_listy(title)
-stringy_title = title_to_str(word_listy)
-print(stringy_title) 
+# turns doc title into a string with default title attribute 
+title_text = doc.title.text
 
