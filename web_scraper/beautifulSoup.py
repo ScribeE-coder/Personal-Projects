@@ -22,8 +22,18 @@ def title_to_str(title):
     stringy = "" 
     for word in title: 
         stringy += word 
-    return stringy 
+    return stringy
+
+def modify_title(title): 
+    title.string = "Jon Kent sucks lol"
+    title = doc.title.text 
+    return title 
 
 # turns doc title into a string with default title attribute 
 title_text = doc.title.text
+
+new_title = modify_title(title)
+print(new_title) 
+
+
 
