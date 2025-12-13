@@ -41,12 +41,19 @@ point2 = Point(100, 100)
 point3 = Point(100, 500)
 point4 = Point(100, 400) 
 point5 = Point(500, 500)
+point6 = Point(200, 350)
 
 points.append(point1) 
 points.append(point2)
 points.append(point3) 
 points.append(point4) 
 points.append(point5) 
+points.append(point6)
+
+
+def points_fill(points): 
+    for point in points: 
+        return None 
 
 running = True 
 while running: 
@@ -58,4 +65,5 @@ while running:
     for point in points: 
         point.plot()
     connect(points)
+    points_fill(points)
     pygame.display.update()
