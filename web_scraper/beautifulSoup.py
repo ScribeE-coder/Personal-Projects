@@ -1,39 +1,46 @@
 from bs4 import BeautifulSoup
 
-# opening file in read mode 
-with open("dummy_html.html", "r") as file: 
-    doc = BeautifulSoup(file, "html.parser")
+class Web_Scraper: 
+    def __init__(self, file): 
+        self.file = file
+        # opening file in read mode (defaults to read "r" not necessary) 
+        with open(self.file) as read_file: 
+            self.doc = BeautifulSoup(read_file, "html.parser") 
 
-def find_title(document): 
-    title = doc.title
-    return title 
+    def find_title(self): 
+        self.title = self.doc.title 
+        return self.title 
+    
+    #mutates title and returns in string format 
+    def modify_title(self, new_title):
+        self.title.string = str(new_title)
+        self.title = self.doc.title.text
+        return self.title
+    
+    # turn doc title into a list 
+    def title_to_list(self):
+        listy = [] 
+        for word in self.title: 
+            listy.append(word)
+        return listy 
+    
+    # converts title to string 
+    def title_to_string(self): 
+        self.title = self.title.text
+        return self.title 
+    
+    # find first instance of given tag 
+    def find_tag(self, tag): 
+        tag = self.doc.find(tag) 
+        return tag 
+    
+    # find all instances of given tag 
+    def find_all_tags(self, tag): 
+        tags = self.doc.find_all(tag)
+        return tags 
 
-title = find_title(doc)
-
-# turns doc title into a list 
-def title_listy(title): 
-   listy = [] 
-   for word in title: 
-       listy.append(word)
-   return listy 
-
-# turns doc title into a string
-def title_to_str(title): 
-    stringy = "" 
-    for word in title: 
-        stringy += word 
-    return stringy
-
-def modify_title(title): 
-    title.string = "Jon Kent sucks lol"
-    title = doc.title.text 
-    return title 
-
-# turns doc title into a string with default title attribute 
-title_text = doc.title.text
-
-new_title = modify_title(title)
-print(new_title) 
+web_scrape = Web_Scraper("dummy_html.html")
+title = web_scrape.find_title()
 
 
 
