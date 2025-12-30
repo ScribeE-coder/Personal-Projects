@@ -67,9 +67,9 @@ def shape_draw(shapes):
             pygame.draw.circle(screen, shape.color, (pos_x, pos_y), radius) 
 
         elif isinstance(shape, pymunk.Poly):
-            offset_x = None 
+            offset_x = None
             offset_y = None  
-            rect = pygame.Rect(pos_x - 100, pos_y - 100, shape.width, shape.height) # offset (pos_x - [], pos_y - []) is half the width/height of the box
+            rect = pygame.Rect(pos_x - offset_x, pos_y - offset_y, shape.width, shape.height) # offset (pos_x - [], pos_y - []) is half the width/height of the box
             pygame.draw.rect(screen, shape.color, rect) 
             
 
