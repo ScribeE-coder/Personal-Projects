@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/chrystopherthomas/Downloads/Personal-Projects/LearningC#/FirstApp/FirstApp.csproj",
-      "projectName": "FirstApp",
-      "projectPath": "/Users/chrystopherthomas/Downloads/Personal-Projects/LearningC#/FirstApp/FirstApp.csproj",
+      "projectUniqueName": "/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/learningCSharp.csproj",
+      "projectName": "learningCSharp",
+      "projectPath": "/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/learningCSharp.csproj",
       "packagesPath": "/Users/chrystopherthomas/.nuget/packages/",
-      "outputPath": "/Users/chrystopherthomas/Downloads/Personal-Projects/LearningC#/FirstApp/obj/",
+      "outputPath": "/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/chrystopherthomas/.nuget/NuGet/NuGet.Config"

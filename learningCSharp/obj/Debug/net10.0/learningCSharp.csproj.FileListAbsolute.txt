@@ -1,0 +1,15 @@
+/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/bin/Debug/net10.0/learningCSharp
+/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/bin/Debug/net10.0/learningCSharp.deps.json
+/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/bin/Debug/net10.0/learningCSharp.runtimeconfig.json
+/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/bin/Debug/net10.0/learningCSharp.dll
+/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/bin/Debug/net10.0/learningCSharp.pdb
+/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/obj/Debug/net10.0/learningCSharp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/obj/Debug/net10.0/learningCSharp.AssemblyInfoInputs.cache
+/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/obj/Debug/net10.0/learningCSharp.AssemblyInfo.cs
+/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/obj/Debug/net10.0/learningCSharp.csproj.CoreCompileInputs.cache
+/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/obj/Debug/net10.0/learningCSharp.sourcelink.json
+/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/obj/Debug/net10.0/learningCSharp.dll
+/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/obj/Debug/net10.0/refint/learningCSharp.dll
+/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/obj/Debug/net10.0/learningCSharp.pdb
+/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/obj/Debug/net10.0/learningCSharp.genruntimeconfig.cache
+/Users/chrystopherthomas/Downloads/Personal-Projects/learningCSharp/obj/Debug/net10.0/ref/learningCSharp.dll
