@@ -24,10 +24,11 @@ namespace learningCSharp
             }
 
             string name = "Chrystopher"; 
-            for (char c = name[0]; c <= name[name.Length - 1]; c++)
+            for (int index = 0; index < name.Length; index ++)
             {
+                char c = name[index]; 
                 Console.WriteLine("The current character is: " + c); 
-            }  
+            }
             
             // Waits for user input before closing window 
             Console.ReadLine(); 
