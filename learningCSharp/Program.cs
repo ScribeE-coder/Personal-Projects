@@ -31,6 +31,13 @@ namespace learningCSharp
             }
 
             long bigNum = 12345678976543210; 
+            int smallNum = 0; 
+            bool truthy = true;
+            
+            if (bigNum > smallNum)
+            {
+                Console.WriteLine(truthy); 
+            }
 
             
             // Waits for user input before closing window 
