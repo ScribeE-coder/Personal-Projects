@@ -29,6 +29,9 @@ namespace learningCSharp
                 char c = name[index]; 
                 Console.WriteLine("The current character is: " + c); 
             }
+
+            long bigNum = 12345678976543210; 
+
             
             // Waits for user input before closing window 
             Console.ReadLine(); 
