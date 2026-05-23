@@ -38,11 +38,9 @@ namespace learningCSharp
             {
                 Console.WriteLine(truthy); 
             }
-
             
             // Waits for user input before closing window 
             Console.ReadLine(); 
-
 
         }
     }
